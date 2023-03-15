@@ -6,11 +6,13 @@ import Register from './src/screens/auth/Register'
 import ForgetPassword from './src/screens/auth/ForgetPassword'
 import AppRouter from './src/router/Router'
 import Splash from './src/screens/splash/Splash'
+import 'react-native-gesture-handler';
+import HomeScreen from './src/screens/HomeScreen'
 
 const App = () => {
   return (
-    <AppRouter />
-    
+  
+   <HomeScreen />
     
       
   )

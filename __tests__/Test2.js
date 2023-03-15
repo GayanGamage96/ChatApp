@@ -13,24 +13,6 @@ const Register = () => {
     const [passWord, setPassWord] = React.useState("");
     const [confirmPassword, setConfirmPassword] = React.useState("");
 
-    const onReg = () => {
-        fetch('http://192.168.148.232:3000/user', {
-            method: 'POST',
-            body: JSON.stringify({
-                "Name": name,
-                "email": email,
-                "userName": userName,
-                "password": passWord,
-                "confirmPassword": confirmPassword
-            }),
-            headers: {
-                'Content-type': 'application/json; charset=UTF-8',
-            },
-        })
-            .then((response) => response.json())
-            .then((json) => console.log(json));
-    }
-
 
     return (
         <SafeAreaView>
@@ -94,7 +76,7 @@ const Register = () => {
 
 
                 <View style={styles.formInput}>
-                    <TouchableOpacity style={styles.button} onPress={()=>onReg()} >
+                    <TouchableOpacity style={styles.button}>
                         <Text style={{ color: "#ffff", fontSize: 16, textAlign: 'center' }}>Register</Text>
                     </TouchableOpacity>
                 </View>
